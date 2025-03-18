@@ -21,12 +21,16 @@
     "load-sample-data": "ts-node -r src/scripts/load-sample-data.ts"
   },
   "dependencies": {
+    "@nestjs/apollo": "^13.0.3",
     "@nestjs/common": "^11.0.11",
     "@nestjs/config": "^4.0.1",
     "@nestjs/core": "^11.0.11",
+    "@nestjs/graphql": "^13.0.3",
     "@nestjs/platform-express": "^11.0.11",
     "@zilliz/milvus2-sdk-node": "^2.5.6",
+    "apollo-server-express": "^3.13.0",
     "dotenv": "^16.4.7",
+    "graphql": "^16.10.0",
     "openai": "^4.87.3",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
