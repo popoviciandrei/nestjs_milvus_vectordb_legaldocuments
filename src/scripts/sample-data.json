@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Copyright Act of 1976",
+    "content": "The Copyright Act of 1976 is the primary basis of copyright law in the United States, and went into effect on January 1, 1978. The Act provides the basic framework for copyright protection, establishing what works are protected, the rights of copyright owners, the duration of copyright protection, and the limitations on those rights. It also establishes the fair use doctrine, which allows limited use of copyrighted material without permission for purposes such as criticism, comment, news reporting, teaching, scholarship, or research."
+  },
+  {
+    "title": "Fair Use Doctrine",
+    "content": "Fair use is a doctrine in United States copyright law that allows limited use of copyrighted material without requiring permission from the rights holders. It provides for the legal, non-licensed citation or incorporation of copyrighted material in another author's work under certain conditions. Examples of fair use include commentary, search engines, criticism, parody, news reporting, research, and scholarship. Fair use provides a balance between copyright law's goal of promoting creativity and innovation by protecting creators' rights and its goal of promoting creativity and innovation by allowing others to build upon existing works."
+  },
+  {
+    "title": "Oracle v. Google - API Copyright Case",
+    "content": "Oracle America, Inc. v. Google LLC is a series of legal disputes between Oracle and Google, arising from Google's use of the Java APIs in its Android operating system. The case centered on whether copyright protection extends to a software's application programming interfaces (APIs). In 2021, the Supreme Court ruled 6-2 in Google's favor, holding that Google's copying of the Java SE API, which included only those lines of code needed to allow programmers to work in a new and transformative program, constituted fair use. The Court emphasized that the copied lines were part of an interface, rather than computer code that actually instructs the computer to execute a task."
+  },
+  {
+    "title": "Digital Millennium Copyright Act",
+    "content": "The Digital Millennium Copyright Act (DMCA) is a 1998 United States copyright law that implements two 1996 treaties of the World Intellectual Property Organization (WIPO). It criminalizes production and dissemination of technology, devices, or services intended to circumvent measures that control access to copyrighted works. It also criminalizes the act of circumventing an access control, whether or not there is actual infringement of copyright itself. The DMCA also provides safe harbor provisions for online service providers, limiting their liability for copyright infringement when they meet certain conditions."
+  },
+  {
+    "title": "Software Licensing Types",
+    "content": "Software licenses typically fall into several categories: Proprietary licenses restrict the user's rights to copy, modify, and redistribute; Open source licenses grant users the right to use, study, change, and distribute the software and its source code to anyone for any purpose; Permissive licenses (like MIT, BSD) allow users to do almost anything with the code, including using it in proprietary software; Copyleft licenses (like GPL) require that derivative works be distributed under the same license terms; and Dual licensing allows the copyright holder to offer the same software under different licenses to different users."
+  },
+  {
+    "title": "Patent vs. Copyright Protection for Software",
+    "content": "Software can be protected by both patents and copyrights, but they protect different aspects. Copyright protects the expression of an idea - the actual code, user interface, and structure - but not the underlying functionality or algorithms. It's automatic upon creation and lasts for the author's life plus 70 years. Patents protect the functional aspects, methods, and processes of software. They require application and approval, last for 20 years, and provide stronger protection against independent creation. However, patents are more difficult and expensive to obtain, requiring novelty, non-obviousness, and utility."
+  },
+  {
+    "title": "EU General Data Protection Regulation",
+    "content": "The General Data Protection Regulation (GDPR) is a regulation in EU law on data protection and privacy in the European Union and the European Economic Area. It addresses the transfer of personal data outside the EU and EEA areas. The GDPR aims primarily to give control to individuals over their personal data and to simplify the regulatory environment for international business by unifying the regulation within the EU. It includes provisions for data subject rights, data breach notifications, privacy by design, and potential fines for violations. Organizations must ensure they have a lawful basis for processing personal data, such as consent or legitimate interest."
+  }
+]

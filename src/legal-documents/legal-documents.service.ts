@@ -3,7 +3,7 @@ import { OpenaiService } from '../openai/openai.service';
 import { MilvusService } from '../milvus/milvus.service';
 import { NumberArrayId, StringArrayId } from '@zilliz/milvus2-sdk-node';
 
-interface Document {
+export interface Document {
   title: string;
   content: string;
 }
