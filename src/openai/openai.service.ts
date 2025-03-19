@@ -34,6 +34,7 @@ export class OpenaiService {
   async generateResponse(prompt: string, context: string): Promise<string> {
     try {
       const response = await this.openai.chat.completions.create({
+        // model: 'text-embedding-3-small',
         model: 'gpt-4o-mini',
         messages: [
           {
