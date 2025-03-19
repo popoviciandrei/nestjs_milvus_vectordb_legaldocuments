@@ -31,6 +31,7 @@ async function bootstrap() {
     console.error('Error loading sample data:', error);
   } finally {
     await app.close();
+    process.exit(0);
   }
 }
 
