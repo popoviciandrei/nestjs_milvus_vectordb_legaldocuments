@@ -1,9 +1,10 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { OpenaiService } from '../openai/openai.service';
 import { MilvusService } from '../milvus/milvus.service';
-import { NumberArrayId, StringArrayId } from '@zilliz/milvus2-sdk-node';
+import { NumberArrayId } from '@zilliz/milvus2-sdk-node';
 
 export interface Document {
+  id?: string;
   title: string;
   content: string;
 }
@@ -21,10 +22,9 @@ export class LegalDocumentsService {
     private milvusService: MilvusService,
   ) {}
 
-  async addDocument(document: Document): Promise<{
-    success: boolean;
-    id?: StringArrayId | NumberArrayId | undefined;
-  }> {
+  async addDocument(
+    document: Document,
+  ): Promise<{ success: boolean; id?: string }> {
     try {
       const embedding = await this.openaiService.createEmbedding(
         `${document.title}\n${document.content}`,
@@ -35,7 +35,10 @@ export class LegalDocumentsService {
           embedding,
         },
       ]);
-      return { success: true, id: result?.IDs };
+      return {
+        success: true,
+        id: (result?.IDs as NumberArrayId).int_id.data[0].toString(),
+      };
     } catch (error) {
       if (error instanceof Error) {
         this.logger.error(`Failed to add document: ${error.message}`);

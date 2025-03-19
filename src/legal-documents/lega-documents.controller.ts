@@ -1,22 +1,17 @@
 import { Controller, Post, Body, Get, Query } from '@nestjs/common';
-import { LegalDocumentsService } from './legal-documents.service';
-
-interface AddDocumentDto {
-  title: string;
-  content: string;
-}
+import { Document, LegalDocumentsService } from './legal-documents.service';
 
 @Controller('legal-documents')
 export class LegalDocumentsController {
   constructor(private legalDocumentsService: LegalDocumentsService) {}
 
   @Post()
-  async addDocument(@Body() document: AddDocumentDto) {
+  async addDocument(@Body() document: Document): Promise<{ success: boolean }> {
     return this.legalDocumentsService.addDocument(document);
   }
 
   @Get('search')
-  async searchDocuments(@Query('query') query: string) {
+  async searchDocuments(@Query('query') query: string): Promise<any> {
     return this.legalDocumentsService.searchDocuments(query);
   }
 }

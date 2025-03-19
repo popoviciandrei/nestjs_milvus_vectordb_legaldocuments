@@ -10,6 +10,7 @@
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
+    "dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
@@ -21,6 +22,7 @@
     "load-sample-data": "ts-node  -r ./src/scripts/load-sample-data.ts"
   },
   "dependencies": {
+    "@apollo/server": "^4.11.3",
     "@nestjs/apollo": "^13.0.3",
     "@nestjs/common": "^11.0.11",
     "@nestjs/config": "^4.0.1",
