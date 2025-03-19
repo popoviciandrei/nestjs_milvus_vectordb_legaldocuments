@@ -30,7 +30,7 @@ export class MilvusService implements OnModuleInit {
         collection_name: this.collectionName,
       });
 
-      if (!hasCollection) {
+      if (!hasCollection.value) {
         this.logger.log(`Creating collection ${this.collectionName}`);
 
         await this.client.createCollection({
@@ -75,6 +75,10 @@ export class MilvusService implements OnModuleInit {
       } else {
         this.logger.log(`Collection ${this.collectionName} already exists`);
       }
+      // Load collection in memory
+      await this.client.loadCollectionSync({
+        collection_name: this.collectionName,
+      });
     } catch (error) {
       this.logger.error(
         `Error creating collection ${this.collectionName}: ${JSON.stringify(error)}`,
