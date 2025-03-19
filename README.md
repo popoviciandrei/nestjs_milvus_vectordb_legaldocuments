@@ -31,6 +31,91 @@
 $ yarn install
 ```
 
+## Setup Instructions
+
+### Prerequisites
+
+- Docker must be up and running on your machine
+- Node.js and Yarn installed
+
+### Setup Steps
+
+#### 1. Start Milvus Docker Container
+
+Run the provided script to set up the Milvus vector database:
+
+```bash
+bash milvius_standalone_embed.sh start
+```
+
+This will start a Milvus standalone instance in a Docker container.
+
+#### 2. Configure Environment Variables
+
+Copy the sample environment file and add your OpenAI API key:
+
+```bash
+cp .env.sample .env
+```
+
+Open the `.env` file and add your OpenAI API key:
+
+```bash
+OPEN_API_KEY=your_api_key_here
+```
+
+#### 3. Load Sample Data
+
+Load the sample documents into the vector database:
+
+```bash
+yarn run load-sample-data
+```
+
+#### 4. Start the NestJS Application
+
+Start the backend application in development mode:
+
+```bash
+yarn run dev
+```
+
+#### 5. Access the GraphQL API
+
+Open your browser and navigate to:
+
+```
+http://localhost:3000/graphql
+```
+
+This will open the GraphQL playground where you can run queries and mutations against the API.
+
+#### 6. Access the Milvus Web UI
+
+To monitor and manage your Milvus instance, access the Milvus Web UI at:
+
+```
+http://127.0.0.1:9091/webui
+```
+
+### Milvus Management Commands
+
+To manage the Milvus container, you can use these commands:
+
+```bash
+# Stop Milvus
+bash milvius_standalone_embed.sh stop
+
+# Restart Milvus
+bash milvius_standalone_embed.sh restart
+
+# Delete Milvus container and data
+bash milvius_standalone_embed.sh delete
+
+# Upgrade Milvus
+bash milvius_standalone_embed.sh upgrade
+```
+
 ## Compile and run the project
 
 ```bash
