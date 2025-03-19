@@ -15,7 +15,7 @@ export class ConfigService {
   }
 
   getMilvusHost(): string {
-    return this.get('MILVUS_HOST') || 'localhost';
+    return this.get('MILVUS_HOST') || '127.0.0.1';
   }
 
   getMilvusPort(): number {
