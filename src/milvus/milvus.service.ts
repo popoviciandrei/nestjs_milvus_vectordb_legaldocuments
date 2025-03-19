@@ -11,7 +11,7 @@ import { ConfigService } from '../config/config.service';
 export class MilvusService implements OnModuleInit {
   private client: MilvusClient;
   private readonly logger = new Logger(MilvusService.name);
-  private readonly collectionName = 'lega_documents';
+  private readonly collectionName = 'documents_cases';
   private readonly dimension = 1536;
 
   constructor(private readonly configService: ConfigService) {}
